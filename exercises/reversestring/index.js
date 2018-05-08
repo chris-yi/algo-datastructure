@@ -15,12 +15,18 @@
 // }
 
 // Solution not using reverse()
-function reverse(str) {
-    let reversed = "";
-    for(let character of str) {
-        reversed = character + reversed;
-    }
-    return reversed;
-  }
+// function reverse(str) {
+//   let reversed = "";
+//   for (let character of str) {
+//     reversed = character + reversed;
+//   }
+//   return reversed;
+// }
+
+// Solution using reduce
+reverse = str => {
+  str = str.split("");
+  return str.reduce((newStr, letter) => letter + newStr, "");
+};
 
 module.exports = reverse;
