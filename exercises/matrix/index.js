@@ -16,16 +16,20 @@
 //     [10,  9,  8, 7]]
 
 function matrix(n) {
+    // First create an empty array
     const results = []
+    // Second push empty arrays into the array n times
     for(let i = 0; i < n; i++) {
         results.push([]);
     }
+    // Third create variables to keep track of current range
     let counter = 1;
     let startColumn = 0;
     let endColumn = n -1;
     let startRow = 0;
     let endRow = n-1;
 
+    // Create while loop
     while(startColumn <= endColumn && startRow <= endRow){
         // Top Row
         for(let i = startColumn; i <= endColumn; i++) {
