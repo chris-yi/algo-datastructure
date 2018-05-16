@@ -50,3 +50,9 @@ Two nested for loops iterating over different collections? --> O(n * m)
 Sorting? --> O(n * log(n)
 
 Searching a sorted array? --> O(log(n))
+
+//////////////////////////////////////////////////////////
+
+Space Complexity is a thing too:
+
+How much more memory is required by doubling the problem set?
