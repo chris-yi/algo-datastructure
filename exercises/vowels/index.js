@@ -52,6 +52,8 @@
 // }
 
 // Using regex
+// match returns an array
+// if array is empty it returns null
 function vowels(str) {
     const matches = str.match(/[aeiou]/gi);
     return matches ? matches.length : 0
