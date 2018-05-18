@@ -36,7 +36,47 @@
 
 // Solution using Recursion
 // Runtime complexity === Exponential Time(2 ^ n)
-function fib(n) {
+// function fib(n) {
+//     if(n < 2) {
+//         return n
+//     }
+//     return fib(n - 1) + fib(n - 2)
+// }
+
+
+// fib(5)
+// With n = 5, it will call fib(4) and fib(3), then fib(4) will call fib(3) and fib(2)..... this continues until it does down to fib(0) and fib(1) in each branch and you sum up all the fib(1) to get the answer.
+
+
+
+
+
+
+
+// If the interviewer ever asks if there is a way we can imporve the recursive solution to fib?
+
+// Answer = memoization
+
+// Memoization : Store the arguments of each function call along with the result.  If the function is called again with the same arguments, return the precomputed result, rather than running the function again.
+
+
+// Below is a generic memoization function!
+
+function memoize(fn) {
+    const cache = {};
+    return function(...args) {
+        if(cache[args]) {
+            return cache[args]
+        }
+
+        const result = fn.apply(this, args);
+        cache[args] = result;
+
+        return result;
+    }
+}
+
+function slowFib(n) {
     if(n < 2) {
         return n
     }
@@ -44,14 +84,13 @@ function fib(n) {
 }
 
 
-// fib(5)
-// With n = 5, it will call fib(4) and fib(3), then fib(4) will call fib(3) and fib(2)..... this continues until it does down to fib(0) and fib(1) in each branch and you sum up all the fib(1) to get the answer.
 
-// If the interviewer ever asks if there is a way we can imporve the recursive solution to fib?
+const fib = memoize(slowFib)
 
-// Answer = memoization
 
-// Memoization : Store the arguments of each function call along with the result.  If the function is called again with the same arguments, return the precomputed result, rather than running the function again.
+
+
+
 
 
 module.exports = fib;
