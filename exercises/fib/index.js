@@ -39,8 +39,13 @@ function fib(n) {
     if(n < 2) {
         return n
     }
-    return fib(n -1) + fib(n - 2)
+    return fib(n - 1) + fib(n - 2)
 }
+
+
+// fib(5)
+// With n = 5, it will call fib(4) and fib(3), then fib(4) will call fib(3) and fib(2)..... this continues until it does down to fib(0) and fib(1) in each branch and you sum up all the fib(1) to get the answer.
+
 
 
 
