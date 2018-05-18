@@ -35,6 +35,7 @@
 
 
 // Solution using Recursion
+// Runtime complexity === Exponential Time(2 ^ n)
 function fib(n) {
     if(n < 2) {
         return n
