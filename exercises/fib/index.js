@@ -76,6 +76,7 @@ function memoize(fn) {
     }
 }
 
+// Function FIB
 function fib(n) {
     if(n < 2) {
         return n
