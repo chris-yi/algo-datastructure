@@ -10,6 +10,15 @@ test('Node is a class', () => {
   expect(typeof Node.prototype.constructor).toEqual('function');
 });
 
+// This is what it looks like with skip.  We deleted each skip when we want to test new test
+// describe.skip('A Node', () => {
+//   test('has properties "data" and "next"', () => {
+//     const node = new Node('a', 'b');
+//     expect(node.data).toEqual('a');
+//     expect(node.next).toEqual('b');
+//   });
+// });
+
 describe('A Node', () => {
   test('has properties "data" and "next"', () => {
     const node = new Node('a', 'b');
@@ -18,7 +27,7 @@ describe('A Node', () => {
   });
 });
 
-describe.skip('Insert First', () => {
+describe('Insert First', () => {
   test('appends a node to the start of the list', () => {
     const l = new List();
     l.insertFirst(1);

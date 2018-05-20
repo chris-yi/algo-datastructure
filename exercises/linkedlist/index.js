@@ -13,6 +13,15 @@ class LinkedList {
     constructor() {
         this.head = null;
     }
+
+    insertFirst(data) {
+        // You can write as a one liner like below:
+        // this.head = new Node(data, this.head);
+        
+        const node = new Node(data, this.head);
+        this.head = node;
+    }
+
 }
 
 
