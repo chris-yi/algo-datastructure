@@ -32,6 +32,11 @@ class LinkedList {
         }
         return counter;
     }
+
+    getFirst() {
+        let node = this.head;
+        return node;
+    }
     
 }
 
