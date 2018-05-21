@@ -34,8 +34,19 @@ class LinkedList {
     }
 
     getFirst() {
+        return this.head
+    }
+
+    getLast() {
+        let counter = 0;
         let node = this.head;
-        return node;
+
+        while(node) {
+            node = node.next
+            if(!node.next) {
+                return node;
+            }
+        }
     }
     
 }
