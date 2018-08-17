@@ -93,6 +93,7 @@ class LinkedList {
       this.head = new Node(data);
     }
   }
+  
 }
 
 module.exports = { Node, LinkedList };

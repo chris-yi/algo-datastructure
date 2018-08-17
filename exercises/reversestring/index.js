@@ -13,20 +13,24 @@
 //     .reverse()
 //     .join("");
 // }
+// }
 
 // Solution not using reverse()
 // function reverse(str) {
-//   let reversed = "";
-//   for (let character of str) {
-//     reversed = character + reversed;
+//   let reversedStr = "";
+
+//   for (let char of str) {
+//     reversedStr = char + reversedStr;
 //   }
-//   return reversed;
+//   return reversedStr;
 // }
 
 // Solution using reduce
-reverse = str => {
-  str = str.split("");
-  return str.reduce((newStr, letter) => letter + newStr, "");
-};
+  const reverse = (str) => {
+    return str.split("").reduce((reversed, curr) => {
+      return curr + reversed;
+    }, "")
+  }
+// };
 
 module.exports = reverse;
