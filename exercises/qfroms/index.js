@@ -16,38 +16,40 @@ const Stack = require('./stack');
 
 class Queue {
     constructor() {
-        this.first = new Stack();
-        this.second = new Stack();
+        this.a = new Stack;
+        this.b = new Stack;
     }
 
     add(record) {
-        this.first.push(record);
+        this.a.push(record);
     }
 
     remove() {
-        while(this.first.peek()) {
-            const record = this.first.pop();
-            this.second.push(record);
+        while(this.a.peek()) {
+            this.b.push(this.a.pop())
         }
-        const record = this.second.pop();
 
-        while(this.second.peek()){
-            this.first.push(this.second.pop());
+        const popped = this.b.pop();
+
+        while(this.b.peek()) {
+            this.a.push(this.b.pop());
         }
-        return record;
+
+        return popped;
     }
 
     peek() {
-        while(this.first.peek()) {
-            this.second.push(this.first.pop());
+        while(this.a.peek()) {
+            this.b.push(this.a.pop())
         }
 
-        const record = this.second.peek();
+        const peek = this.b.data[this.b.data.length - 1];
 
-        while(this.second.peek()) {
-            this.first.push(this.second.pop());
+        while(this.b.peek()) {
+            this.a.push(this.b.pop());
         }
-        return record;
+
+        return peek;
     }
 }
 
