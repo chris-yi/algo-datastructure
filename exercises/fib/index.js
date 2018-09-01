@@ -53,7 +53,7 @@
 
 
 
-// If the interviewer ever asks if there is a way we can imporve the recursive solution to fib?
+// If the interviewer ever asks if there is a way we can improve the recursive solution to fib?
 
 // Answer = memoization
 

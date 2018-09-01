@@ -17,9 +17,11 @@ class Queue {
         this.data.unshift(record);
     }
 
-    remove() {
-        return this.data.pop();
+    remove(record) {
+        return this.data.pop(record);
     }
 }
+
+const q = new Queue();
 
 module.exports = Queue;
