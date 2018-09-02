@@ -37,7 +37,7 @@ describe('Insert First', () => {
   });
 });
 
-describe('Size', () => {
+describe.skip('Size', () => {
   test('returns the number of items in the linked list', () => {
     const l = new List();
     expect(l.size()).toEqual(0);
@@ -49,7 +49,7 @@ describe('Size', () => {
   });
 });
 
-describe('GetFirst', () => {
+describe.skip('GetFirst', () => {
   test('returns the first element', () => {
     const l = new List();
     l.insertFirst(1);
@@ -59,7 +59,7 @@ describe('GetFirst', () => {
   });
 });
 
-describe('GetLast', () => {
+describe.skip('GetLast', () => {
   test('returns the last element', () => {
     const l = new List();
     l.insertFirst(2);
@@ -69,7 +69,7 @@ describe('GetLast', () => {
   });
 });
 
-describe('Clear', () => {
+describe.skip('Clear', () => {
   test('empties out the list', () => {
     const l = new List();
     expect(l.size()).toEqual(0);
@@ -83,7 +83,7 @@ describe('Clear', () => {
   });
 });
 
-describe('RemoveFirst', () => {
+describe.skip('RemoveFirst', () => {
   test('removes the first node when the list has a size of one', () => {
     const l = new List();
     l.insertFirst('a');
@@ -106,7 +106,7 @@ describe('RemoveFirst', () => {
   });
 });
 
-describe('RemoveLast', () => {
+describe.skip('RemoveLast', () => {
   test('RemoveLast removes the last node when list is empty', () => {
     const l = new List();
     expect(() => {
@@ -144,7 +144,7 @@ describe('RemoveLast', () => {
   });
 });
 
-describe('InsertLast', () => {
+describe.skip('InsertLast', () => {
   test('adds to the end of the list', () => {
     const l = new List();
     l.insertFirst('a');
